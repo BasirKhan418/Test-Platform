@@ -1,9 +1,16 @@
-import { Button } from "./components/ui/button"
-export default function App() {
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline bg-green-500">
-      Hello world!
-      <Button>Click me</Button>
-    </h1>
+    <div>
+      <Router>
+     <Routes>
+        <Route path="/" element={<LoginPage/>} />
+      </Routes>
+      </Router>
+    </div>
   )
 }
+
+export default App
